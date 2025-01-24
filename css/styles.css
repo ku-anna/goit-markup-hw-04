@@ -25,6 +25,7 @@ img {
 header{
     border-bottom: 1px solid #e7e9fc;
     background-color: #ffffff;
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 /*----------------------HEADER--------------------*/
 .container {
@@ -63,6 +64,10 @@ header{
     display: block;
     position: relative;
 }
+.nav-link{
+    color: #404bbf;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 .navlink::after{
     position: absolute;
     border-radius: 2px;
@@ -71,7 +76,7 @@ header{
     background: #404bbf;
     content: '';
     display: block;
-    bottom: 0;
+    bottom: -1px;
 }
 .link:hover,
 .link:focus{
@@ -96,6 +101,7 @@ header{
     letter-spacing: 0.02em;
     padding: 24px 0;
     display: block;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .address:hover,
 .address:focus {
@@ -112,12 +118,13 @@ ul, ol {
 
 /*-------------BUTTON SECTION--------------*/
 .solutions{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/background.png');
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url('/images/background.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     padding: 188px 0;
     margin: 0 auto;
+    max-width: 1440px; 
 }
 .header-solutions {
     max-width: 496px;
@@ -148,6 +155,7 @@ ul, ol {
     background: #4d5ae5;
     padding: 16px 32px;
     margin: 0 auto;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .button:hover,
 .button:focus {
@@ -177,6 +185,7 @@ ul, ol {
     width: 264px;
     height: 112px;
     background: #f4f4fd;
+    margin-bottom: 8px;
 }
 .header-principles {
     font-weight: 500;
@@ -234,11 +243,27 @@ ul, ol {
     box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
     background: #fff;
 }
-.social {
+.social-links {
     display:flex;
     justify-content: space-evenly;
-    align-items: center;
+    justify-content: center;
     padding-top: 10px;
+    gap: 24px;
+}
+.social-li {
+    width: 40px;
+    height: 40px;
+}
+.icon-link {
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1)
+}
+.icon-link:hover {
+ background-color: #0c1ee7;
+ transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.social-icon {
+    fill: #fff;
 }
 
 .li-team{
@@ -285,6 +310,10 @@ ul, ol {
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     padding: 40px 32px 164px 32px;
 }
+.portfolio-card:hover{
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 .hover-text{
     font-family: "Roboto", sans-serif;
     font-weight: 400;
@@ -292,6 +321,8 @@ ul, ol {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #f4f4fd;
+    transform: translateY(0%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio-card:hover .card-hover {
     transform: translateY(0);
@@ -337,7 +368,7 @@ img {
 }
 .footer-container{
     display: flex;
-    padding-left: 300px;
+   margin: 0 auto;
     width: auto;
 }
  .footer-logo{
@@ -350,6 +381,8 @@ img {
     text-transform: uppercase;
     color: #4D5AE5;
     margin-bottom: 16px;
+    align-items: baseline;
+    margin-right: 120px;
 }
 
 .footer-span{
@@ -374,7 +407,7 @@ color: #fff;
 .social-footer{
     margin-left: 120px;
 }
-.footer-icons{
+.footer-icons-list{
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
@@ -382,4 +415,21 @@ color: #fff;
     gap: 16px;
     width: 208px;
     height: 40px;
+}
+.footer-soc-icon {
+    width: 40px;
+    height: 40px;
+}
+.footer-icon-link {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: #4d5ae5;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+}
+.footer-icon-link:hover
+.footer-icon-link:focus {
+    background-color: #31d0aa;
 }
