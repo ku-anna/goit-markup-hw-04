@@ -299,6 +299,7 @@ ul, ol {
 }
 .portfolio-card {
     width: calc((100% - 48px) / 3);
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .card-image {
     position: relative;
@@ -327,7 +328,7 @@ ul, ol {
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 100%; /* Ensure it covers the image */
+    height: 100%; 
     background-color: #4d5ae5;
     padding: 40px 32px 164px 32px;
     font-family: "Roboto", sans-serif;
@@ -336,12 +337,9 @@ ul, ol {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #f4f4fd;
-    transform: translateY(100%); /* Hidden initially */
+    transform: translateY(100%); 
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    display: flex; /* Flexbox for centering text */
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+    padding: 40px 32px;
 }
 
 .portfolio-card:hover {
@@ -352,7 +350,7 @@ ul, ol {
 }
 
 .portfolio-card:hover .hover-text {
-    transform: translateY(0); /* Make the text slide up */
+    transform: translateY(0); 
 }
 
 img {
@@ -462,7 +460,7 @@ img {
     justify-content: center;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1); ;
 }
-.footer-icon-link:hover
+.footer-icon-link:hover,
 .footer-icon-link:focus {
     background-color: #31d0aa;
 }
