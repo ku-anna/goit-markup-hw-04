@@ -59,10 +59,11 @@ header{
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
-    color: #2e2f42;
+    color: #404bbf;
     padding: 24px 0;
     display: block;
     position: relative;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .nav-link{
     color: #404bbf;
@@ -237,7 +238,7 @@ ul, ol {
 .team-card {
     background-color: #f4f4fd;
 }
-.dude {
+.card-info {
     text-align: center;
     padding: 32px 0;
     box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
@@ -286,6 +287,7 @@ ul, ol {
     margin: 76px 156px 120px 156px;
 }
 .portfolio-card {
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
     width: calc((100% - 48px) / 3);
 }
 .card-image {
@@ -307,7 +309,6 @@ ul, ol {
     background-color: #4d5ae5;
     transform: translateY(100%);
     transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     padding: 40px 32px 164px 32px;
 }
 .portfolio-card:hover{
@@ -323,6 +324,8 @@ ul, ol {
     color: #f4f4fd;
     transform: translateY(0%);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    position: absolute;
+    
 }
 .portfolio-card:hover .card-hover {
     transform: translateY(0);
@@ -368,8 +371,9 @@ img {
 }
 .footer-container{
     display: flex;
-   margin: 0 auto;
     width: auto;
+    align-items: baseline;
+    margin-right: 120px;
 }
  .footer-logo{
     display: inline-block;
@@ -398,10 +402,10 @@ img {
 .social-text{
     font-family: "Roboto", sans-serif;
    font-weight: 500;
-font-size: 16px;
-line-height: 1.5;
-letter-spacing: 0.02em;
-color: #fff;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #fff;    
     margin-bottom: 16px;
 }
 .social-footer{
@@ -418,7 +422,8 @@ color: #fff;
 }
 .footer-soc-icon {
     width: 40px;
-    height: 40px;
+    height: 40px;/
+    fill: #f4f4fd; 
 }
 .footer-icon-link {
     display: flex;
@@ -428,6 +433,7 @@ color: #fff;
     border-radius: 50%;
     align-items: center;
     justify-content: center;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1); ;
 }
 .footer-icon-link:hover
 .footer-icon-link:focus {
